@@ -101,8 +101,8 @@ export default {
         }
     }
     .icon {
-        width: 2em;
-        height: 2em;
+        width: 1rem;
+        height: 1rem;
         /* font-size: 16pt; */
         vertical-align: -0.15em;
         fill: currentColor;

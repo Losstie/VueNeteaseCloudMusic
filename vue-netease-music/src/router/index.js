@@ -4,6 +4,7 @@ import Podcast from "@/views/Podcast.vue";
 import User from "@/views/User.vue";
 import Ksong from "@/views/Ksong.vue";
 import CloudVillage from "@/views/CloudVillage.vue";
+import SearchPage from "@/views/SearchPage.vue";
 
 
 
@@ -32,6 +33,11 @@ const routes = [
     path: "/cloud-village",
     name: "CloudVillage",
     component: CloudVillage,
+  },
+  {
+    path: "/search",
+    name: "SearchPage",
+    component: SearchPage,
   },
 ];
 

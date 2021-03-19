@@ -4,18 +4,18 @@ export default createStore({
   state: {
     HOST:'http://localhost:3000',
     activePage: "发现",
-    news: "",
-    placeholder:""
+    news: 1,
+    curKeywords:""
   },
   getters: {
     activePage: state => state.activePage,
     news: state => state.news,
-    placeholder: state=> state.placeholder
+    getKeywords: state=> state.curKeywords
   },
   mutations: {
     SetActivePage: (state, activePage) => { state.activePage = activePage },
     SetNews: (state, news) => { state.news = news },
-    SetPlaceholder: (state, placeholder) => { state.placeholder = placeholder}
+    SetKeywords: (state, curKeywords) => { state.curKeywords = curKeywords}
   },
   actions: {},
   modules: {},
