@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <TheHeader/>
+    <!-- <Swiper :banners="banners"/> -->
     <TheFooter/>
   </div>
 </template>
@@ -8,20 +9,30 @@
 <script>
 // @ is an alias to /src
 import TheFooter from "@/components/TheFooter.vue";
+// import Swiper from "@/components/Swiper.vue";
 import TheHeader from "@/components/TheHeader.vue";
 
 import axios from "axios";
 
 export default {
   name: "Home",
+  data(){
+    return {
+      banners:[]
+    }
+  },
   components: {
     TheFooter,
+    // Swiper,
     TheHeader,
   },
   mounted(){
     this.getKeywords();
+    // this.getNews();
+    this.getBanner();
   },
   methods: {
+    // 获取搜索关键词
     getKeywords(){
       let _this = this;
       axios
@@ -31,10 +42,22 @@ export default {
           _this.$store.commit('SetKeywords', words);
         });
     },
+    // 获取详细数
     getNews(){
       let _this = this;
       axios
         .get(_this.$store.state.HOST+"")
+    },
+    getBanner(){
+      let _this = this;
+      axios.get(_this.$store.state.HOST + "/banner?type=2")
+        .then((response) => {
+          console.log("轮播图 ===> ", response.data.banners);
+          _this.banners = response.data.banners;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
   }
 };

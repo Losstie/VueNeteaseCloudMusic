@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar">
-        <div class="btn">
+        <div class="btn" @click="triggleBar()">
             <span>
                 <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-cebianlan"></use>
@@ -13,7 +13,7 @@
         <div class="bar" v-show="isShow">
             <div class="logInfo">
                 <router-link to="/user">
-                    <img src="picUrl" alt="headicon"/>
+                    <img :src="avatar" alt="headicon" v-show="nickName != '未登录'"/>
                     <span>{{nickName}}</span>
                     <span class="icon" aria-hidden="true">
                          <use xlink:href="#cebianlanzhankai"></use>
@@ -24,14 +24,17 @@
     </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 export default {
     name: "SideBar",
-    props:{
-        news: Number,
-        picUrl: String,
-        nickName: String,
-        isShow: Boolean
+    computed:{
+        ...mapGetters(['news','avatar','nickName','isShow'])
     },
+    methods:{
+        triggleBar(){
+            console.log(111)
+        }
+    }
 
 }
 </script>

@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory } from "vue-router";
+import Vue from "vue";
+import VueRouter from "vue-router";
 import Home from "@/views/Home.vue";
 import Podcast from "@/views/Podcast.vue";
 import User from "@/views/User.vue";
@@ -6,7 +7,7 @@ import Ksong from "@/views/Ksong.vue";
 import CloudVillage from "@/views/CloudVillage.vue";
 import SearchPage from "@/views/SearchPage.vue";
 
-
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -41,8 +42,9 @@ const routes = [
   },
 ];
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+const router = new VueRouter({
+  mode: "history",
+  base: process.env.BASE_URL,
   routes,
 });
 
