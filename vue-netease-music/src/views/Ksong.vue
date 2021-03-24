@@ -1,7 +1,7 @@
 <template>
   <div class="k-song">
     <div class="ksong-content">开发中...</div>
-    <TheFooter/>
+    <TheFooter />
   </div>
 </template>
 

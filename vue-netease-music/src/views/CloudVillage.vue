@@ -1,7 +1,7 @@
 <template>
   <div class="cloud-village">
     <div class="cloud-village-content">开发中...</div>
-    <TheFooter/>
+    <TheFooter />
   </div>
 </template>
 

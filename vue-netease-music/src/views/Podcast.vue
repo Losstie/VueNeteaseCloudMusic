@@ -1,7 +1,7 @@
 <template>
   <div class="podcast">
     <div class="podcast-content">开发中...</div>
-    <TheFooter/>
+    <TheFooter />
   </div>
 </template>
 

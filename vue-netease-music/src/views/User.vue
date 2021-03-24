@@ -1,7 +1,7 @@
 <template>
   <div class="user">
     <div class="user-content">开发中...</div>
-    <TheFooter/>
+    <TheFooter />
   </div>
 </template>
 

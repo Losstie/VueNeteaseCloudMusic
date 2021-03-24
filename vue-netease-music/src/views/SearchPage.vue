@@ -1,7 +1,7 @@
 <template>
   <div class="search-page">
     <div class="searchPage-content">开发中...</div>
-    <TheFooter/>
+    <TheFooter />
   </div>
 </template>
 
@@ -10,8 +10,7 @@
 
 export default {
   name: "SearchPage",
-  components: {
-  },
+  components: {},
 };
 </script>
 <style lang="scss" scoped>
