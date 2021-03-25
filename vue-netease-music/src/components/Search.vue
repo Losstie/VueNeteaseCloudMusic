@@ -28,19 +28,19 @@ export default {
   width: 70vw;
   input {
     width: 100%;
-    height: 36px;
+    height: 2.25rem;
     border: 0;
-    border-radius: 15px;
-    line-height: 36px;
-    font-size: 12px;
-    text-indent: 15%;
+    border-radius: 1rem;
+    line-height: 2.25rem;
+    font-size: 0.75rem;
+    text-indent: 2.5rem;
     background-color: #fdfdfd;
     color: #a7a7a7;
   }
   span {
     position: absolute;
     top: 25%;
-    left: 6%;
+    left: 1rem;
   }
 }
 

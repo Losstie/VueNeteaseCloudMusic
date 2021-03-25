@@ -74,21 +74,19 @@ export default {
 }
 .item-page {
   width: 100%;
-  height: 60px;
+  height: 3.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-color:  #eceae8;
   background-color: #fff;
 
   li {
     width: 20%;
-    height: 50px;
+    height: 3.123rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 8px;
     color: #959595;
   }
   .active-page {
@@ -97,12 +95,14 @@ export default {
   .active-icon {
     background: linear-gradient(to right, #ff5a4c, #ff1d11);
     color: #ffffff;
-    border-radius: 100%;
-    min-width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 50%;
+  }
+  span {
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.8rem;
+    text-align: center;
+    font-size: 0.5rem;
   }
 }
 .icon {
